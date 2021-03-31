@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 Route::group(['namespace' => 'Frontend'], function()
-    {
-        Route::resource('home', 'HomeController');
-    });
+{
+    Route::resource('home', 'HomeController');
+});
+
+Route::group(['namespace' => 'Backend'], function()
+{
+    Route::resource('dashboard', 'DashboardController');
+});
