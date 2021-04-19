@@ -29,18 +29,18 @@ Route::get('admin/profile', function () {
 })->middleware('auth');
 
 #2. lebih dari 1 middleware
-Route::get('/', function () {
-    //
-})->middleware('first', 'second');
+// Route::get('/', function () {
+//     //
+// })->middleware('first', 'second');
 
 Route::get('admin/profile', function () {
     //
 })->middleware(CheckAge::class);
 
 //menggunakan grup middleware
-Route::get('/', function () {
-    //
-})->middleware('web');
+// Route::get('/', function () {
+//     //
+// })->middleware('web');
 
 Route::group(['middleware' => ['web']], function () {
     //
