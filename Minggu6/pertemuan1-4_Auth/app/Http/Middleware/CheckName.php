@@ -4,8 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class CheckAge
+class CheckName
 {
     /**
      * Handle an incoming request.
@@ -16,7 +17,7 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->age <= 13) {
+        if (Auth::user()->name == 'tes') {
             return redirect('error/403');
         }
 

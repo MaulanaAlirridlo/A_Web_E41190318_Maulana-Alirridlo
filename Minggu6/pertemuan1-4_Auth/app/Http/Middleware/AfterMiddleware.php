@@ -18,7 +18,9 @@ class AfterMiddleware
     {
         $respone = $next($request);
 
-        // Perform action
+        if ($request->age <= 13) {
+            return redirect('error/403');
+        }
 
         return $respone;
     }

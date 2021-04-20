@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class CheckRole
 {
@@ -16,8 +18,9 @@ class CheckRole
      */
     public function handle($request, Closure $next, $role)
     {
-        if (! $request->user()->hasRole($role)) {
-            // Redirect...
+        dd(User::hasRole($role, Auth::id()));
+        if (! User::hasRole($role, Auth::id())) {
+            return redirect('error/403');
         }
 
         return $next($request);

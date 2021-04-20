@@ -16,7 +16,9 @@ class BeforeMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // perform action
+        if ($request->age <= 13) {
+            return redirect('error/403');
+        }
 
         return $next($request);
     }

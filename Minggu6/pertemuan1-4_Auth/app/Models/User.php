@@ -19,8 +19,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'username',
+        'age',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -41,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function hasRole($role, $id)
+    {
+        return User::where('role', $role)->where('id', $id)->exist();
+    }
 }
