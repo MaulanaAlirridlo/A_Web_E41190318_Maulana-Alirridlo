@@ -18,7 +18,6 @@ class CheckRole
      */
     public function handle($request, Closure $next, $role)
     {
-        dd(User::hasRole($role, Auth::id()));
         if (! User::hasRole($role, Auth::id())) {
             return redirect('error/403');
         }
