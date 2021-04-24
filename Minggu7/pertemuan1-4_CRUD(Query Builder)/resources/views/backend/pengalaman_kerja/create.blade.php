@@ -37,7 +37,7 @@
                       route('pengalaman_kerja.store') }}" class="form-validare form-horizontal" id="pengalaman_kerja_form">
                       {!! csrf_field() !!}
                       {!! isset($pengalaman_kerja) ? method_field('PUT') : '' !!}
-                      <input type="hidden" name="id" value="{{$pengalaman_kerja->id}}">
+                      <input type="hidden" name="id" value="{{ isset($pengalaman_kerja) ? $pengalaman_kerja->id : "" }}">
                       <div class="form-group">
                         <label for="nama" class="control-label col-lg-2">Nama Perusahaan<span class="required">*</span></label>
                         <div class="col-lg-10">

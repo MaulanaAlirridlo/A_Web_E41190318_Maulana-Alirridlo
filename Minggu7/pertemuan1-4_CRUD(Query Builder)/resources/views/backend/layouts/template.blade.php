@@ -68,7 +68,6 @@
         </ul>
         <!--  search form end -->
       </div>
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">

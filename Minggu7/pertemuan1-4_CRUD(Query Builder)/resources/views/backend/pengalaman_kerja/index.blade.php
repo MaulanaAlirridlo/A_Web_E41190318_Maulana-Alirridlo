@@ -32,11 +32,11 @@
                   <table class="table table-striped table-advance table-hover">
                     <tbody>
                       <tr>
-                        <th><i class="icon_bag"></i>Nama</th>
-                        <th><i class="icon_document"></i>Jabatan</th>
-                        <th><i class="icon_calendar"></i>Tahun Masuk</th>
-                        <th><i class="icon_calendar"></i>Tahun Selesai</th>
-                        <th><i class="icon_cogs"></i>Action</th>
+                        <th><i class="icon_bag"></i> Nama</th>
+                        <th><i class="icon_document"></i> Jabatan</th>
+                        <th><i class="icon_calendar"></i> Tahun Masuk</th>
+                        <th><i class="icon_calendar"></i> Tahun Selesai</th>
+                        <th><i class="icon_cogs"></i> Action</th>
                       </tr>
                       @foreach ($pengalaman_kerja as $item)
                       <tr>
